@@ -1,16 +1,15 @@
 #pragma once
 #include "Rollable.hpp"
-#include "Dice.hpp"
+#include <memory>
 
 class ThreeDicePool : public Rollable{
 public:
-    ThreeDicePool(unsigned max, 
-                  unsigned seed_1, 
-                  unsigned seed_2, 
-                  unsigned seed_3);
+    ThreeDicePool(std::unique_ptr<Rollable> d1,
+                  std::unique_ptr<Rollable> d2,
+                  std::unique_ptr<Rollable> d3);
     unsigned roll() override;
     ~ThreeDicePool() override;
 
 private:
-    Dice d1, d2, d3;
+    std::unique_ptr<Rollable> d1, d2, d3;
 };
