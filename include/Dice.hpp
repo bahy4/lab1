@@ -1,10 +1,12 @@
 #pragma once
 #include<random>
+#include "Rollable.hpp"
 
-class Dice {
+class Dice : public Rollable {
 public:
     Dice(unsigned max, unsigned seed);
-    unsigned roll();
+    unsigned roll() override;
+    ~Dice() override;
 
 private:
     unsigned max;

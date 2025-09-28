@@ -6,3 +6,5 @@ Dice::Dice(unsigned max, unsigned seed)
 unsigned Dice::roll() {
     return dstr(reng);
 }
+
+Dice::~Dice() = default;
