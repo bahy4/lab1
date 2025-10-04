@@ -7,7 +7,7 @@
 #include <utility>
 #include <cmath>
 
-/*//DoubleDice без наследования
+//DoubleDice без наследования
 DoubleDice::DoubleDice (std::unique_ptr<Rollable> dice)
     : baseDice(std::move(dice)){}
 
@@ -20,9 +20,9 @@ unsigned DoubleDice::roll(){
     unsigned roll4 = baseDice->roll();
     
     return fmax(roll1, roll2) + fmin(roll3, roll4);
-}*/
+}
 
-
+/*
 //DoubleDice с наследованием
 class SharedDiceWrapper : public Rollable {
 public:
@@ -44,3 +44,4 @@ unsigned DoubleDice::roll(){
 }
 
 DoubleDice::~DoubleDice() = default;
+*/

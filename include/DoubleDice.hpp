@@ -4,7 +4,7 @@
 #include "Rollable.hpp"
 #include <memory>
 
-/*//DoubleDice без наследования
+//DoubleDice без наследования
 class DoubleDice : public Rollable{
 public:
     DoubleDice(std::unique_ptr<Rollable> dice);
@@ -12,8 +12,8 @@ public:
     ~DoubleDice() override;
 private:
     std::unique_ptr<Rollable> baseDice;
-};*/
-
+};
+/*
 //DoubleDice с наследованием
 class DoubleDice: public BonusDice, public PenaltyDice{
 public:
@@ -24,3 +24,4 @@ public:
 private:
     std::unique_ptr<Rollable> baseDice;
 }; 
+*/

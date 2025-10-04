@@ -34,7 +34,7 @@ void print_histogram(Rollable& r, const std::string& name, unsigned minn, unsign
     std::cout<<"\nГистограмма для "<< name<<std::endl;
     double max_prob=0;
     double summ=0;
-    std::pmr::vector<double> vec (maxx+1);
+    std::vector<double> vec (maxx+1);
     for (unsigned i = minn; i<=maxx; ++i){
         vec[i]=value_probability(i, r,NUM);
         if (vec[i]>max_prob) max_prob=vec[i];
